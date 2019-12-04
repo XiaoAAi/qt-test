@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "custbutton.h"
 #include "custbuttonex.h"
+#include "custwidget.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -15,6 +16,10 @@ MainWindow::MainWindow(QWidget *parent) :
     CustButtonEx *cbtne = new CustButtonEx(this);
     cbtne->move(QPoint(200, 200));
     cbtne->setText("MINE");
+
+//    CustWidget *cwgt = new CustWidget(this);
+//    cwgt->move(QPoint(300, 300));
+
 
 }
 

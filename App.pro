@@ -31,12 +31,14 @@ SOURCES += \
         src/main.cpp \
         src/mainwindow.cpp \
         src/custbutton.cpp \
-        src/custbuttonex.cpp
+        src/custbuttonex.cpp \
+    src/custwidget.cpp
 
 HEADERS += \
         hdr/mainwindow.h \
         hdr/custbutton.h \
-        hdr/custbuttonex.h
+        hdr/custbuttonex.h \
+    hdr/custwidget.h
 
 FORMS += \
         ui/mainwindow.ui \
