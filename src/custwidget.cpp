@@ -20,3 +20,4 @@ bool CustWidget::event(QEvent *ent)
 
     return QWidget::event(ent);
 }
+

@@ -18,8 +18,24 @@ void CustButton::mousePressEvent(QMouseEvent *ent)
 //        QPushButton::clicked();
 //    }
 
-    ent->ignore();
+//    ent->ignore();
     qDebug("custbutton click");
+}
+
+//
+bool CustButton::event(QEvent *ent)
+{
+  QMouseEvent *key_ent = static_cast<QMouseEvent *>(ent);
+  if(key_ent->type() == QEvent::MouseButtonRelease)
+  {
+      qDebug("cbtn mouse press");
+      return true;
+  }
+  else
+  {
+      //use  event() of parents
+      return QPushButton::event(ent);
+  }
 }
 
 void CustButton::onBtnClicked()

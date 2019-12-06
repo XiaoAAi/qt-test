@@ -5,6 +5,9 @@
 #include <QEvent>
 #include <QMouseEvent>
 #include <QDebug>
+#include "custbutton.h"
+#include "custbuttonex.h"
+#include "custwidget.h"
 
 namespace Ui {
 class MainWindow;
@@ -21,10 +24,13 @@ public:
 private:
     Ui::MainWindow *ui;
 
+    CustButton *cbtn;
+
 protected:
     void mouseMoveEvent(QMouseEvent *event);
     void mousePressEvent(QMouseEvent *ent);
     void mouseReleaseEvent(QMouseEvent *ent);
+    bool eventFilter(QObject *watched, QEvent *event);
 
 private slots:
     void on_btn_clicked();
